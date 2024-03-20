@@ -63,6 +63,12 @@ flutter:
   assets:
     - assets/icons/backButton.png
     - assets/icons/moreButton.png
+    - assets/icons/LimitIncrease.svg
+    - assets/icons/ErrorSymbol.svg
+    - assets/icons/GoldCoin.svg
+    - assets/icons/CibilScore.svg
+    - assets/icons/Locker.svg
+    - assets/icons/rightButton.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
