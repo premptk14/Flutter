@@ -1,75 +1,61 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: appBar(),
-        body: Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
-              decoration: BoxDecoration(boxShadow: [
-                BoxShadow(
-                    color: Color(0xff1D1617).withOpacity(0.11),
-                    blurRadius: 40,
-                    spreadRadius: 0.0)
-              ]),
-              child: TextField(
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15),
-                        borderSide: BorderSide.none)),
+      body: Center(
+        child: Container(
+          height: 300,
+          width: 400,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.black, Colors.grey[850]!],
+            ),
+          ),
+          // padding: EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                padding: const EdgeInsets.only(left: 20.0, top: 20.0),
+                child: const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Increase your credit limit',
+                        style: TextStyle(fontSize: 25.0, color: Colors.orangeAccent),
+                      ),
+                      Text(
+                        'Prepare for any emergency',
+                        style: TextStyle(fontSize: 20.0, color: Colors.white70),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-            )
-          ],
-        ));
-  }
-}
-
-AppBar appBar() {
-  return AppBar(
-    title: const Text(
-      'Breakfast',
-      style: TextStyle(
-          color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
-    ),
-    centerTitle: true,
-    backgroundColor: Colors.blue,
-    leading: GestureDetector(
-      onTap: () {},
-      child: Container(
-        margin: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-        alignment: Alignment.center,
-        child: Image.asset(
-          'assets/icons/backButton.png',
-          height: 25,
-          width: 25,
+              Container(
+                padding: EdgeInsets.all(10.0),
+                child: SvgPicture.asset('assets/icons/limitIncrease.svg'),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                child: const Text(
+                  '20000',
+                  style: TextStyle(fontSize: 20.0, color: Colors.white),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-    ),
-    actions: [
-      GestureDetector(
-          onTap: () {},
-          child: Container(
-            margin: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-            alignment: Alignment.center,
-            width: 37,
-            child: Image.asset(
-              'assets/icons/moreButton.png',
-              height: 25,
-              width: 25,
-            ),
-          ))
-    ],
-  );
+    );
+  }
 }
