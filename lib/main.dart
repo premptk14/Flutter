@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/pages/ManageEmiPage.dart';
+import 'package:hello_world/views/EMI/ManageEmiPage.dart';
 
 void main() {
   runApp(const MyApp());

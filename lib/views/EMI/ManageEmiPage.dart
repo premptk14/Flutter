@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/pages/TransactionOnEMI.dart';
-import 'package:hello_world/pages/SelectEligibleTransaction.dart';
+import 'package:hello_world/widgets/EMI/TransactionOnEMI.dart';
+import 'package:hello_world/widgets/EMI/SelectEligibleTransaction.dart';
 
 class ManageEmiPage extends StatelessWidget {
   const ManageEmiPage({super.key});
@@ -26,7 +26,7 @@ class ManageEmiPage extends StatelessWidget {
               child: Container(
                 margin: const EdgeInsets.all(15.0), // Increased margin to 8.0
                 child: const Text(
-                  'Continue',
+                  'Convert to EMI',
                   style: TextStyle(
                     fontSize: 16,
                     fontFamily: 'Inter',
