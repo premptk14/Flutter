@@ -10,7 +10,7 @@ class SelectEligibleTransaction extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.all(10.0),
-            padding: const EdgeInsets.symmetric(horizontal: 27, vertical: 22),
+            // padding: const EdgeInsets.symmetric(horizontal: 27, vertical: 22),
             decoration: ShapeDecoration(
               color: const Color(0xFF262626),
               shape: RoundedRectangleBorder(
@@ -22,23 +22,27 @@ class SelectEligibleTransaction extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Flexible(
-                      child: Text(
-                        'Select eligible transactions to convert into EMIs',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'Inter',
-                          fontWeight: FontWeight.w500,
+                Padding(
+                  padding: const EdgeInsets.only(
+                      left: 27.0, top: 22.0, bottom: 8.0, right: 27.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Flexible(
+                        child: Text(
+                          'Select eligible transactions to convert into EMIs',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 SizedBox(height: 11),
                 EligibleTransaction(
@@ -82,7 +86,8 @@ class EligibleTransaction extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.only(
+              left: 15.0, top: 10.0, bottom: 10.0, right: 15.0),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,

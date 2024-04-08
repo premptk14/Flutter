@@ -5,8 +5,7 @@ class TotalTransaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
+    return Column(
         children: [
           Container(
             margin: const EdgeInsets.all(10.0),
@@ -122,7 +121,6 @@ class TotalTransaction extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 }
