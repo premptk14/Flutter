@@ -53,37 +53,43 @@ class VisaReward extends StatelessWidget {
                     children: [
                       Container(
                         padding: const EdgeInsets.all(4.0),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF616161),
-                          borderRadius: BorderRadius.circular(8.0),
-                        ),
-                        child: const Text(
-                          "Get 40% off on Apple Pay",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                          ),
+                        child: SvgPicture.asset(
+                          'assets/images/visa_header_image.svg',
+                          width: 30, // Set the width of the SVG image
+                          height: 30, // Set the height of the SVG image
                         ),
                       ),
                       const SizedBox(height: 8), // Add space here
                       const Text(
                         "Top Offers on your Visa Credit Cards",
                         style: TextStyle(
-                          fontSize: 17.0,
+                          fontSize: 18.0,
                           color: Colors.white,
                           fontWeight: FontWeight.w400,
                         ),
                         softWrap: true,
                       ),
                       const SizedBox(height: 12), // Add space here
-                      const Text(
-                        "Explore",
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          color: Color(0xFFFFE3B6),
-                          fontWeight: FontWeight.w500,
-                        ),
+                      Row(
+                        children: [
+                          const Text(
+                            "Explore",
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              color: Color(0xFFFFE3B6),
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Container(
+                            padding: const EdgeInsets.all(4.0),
+                            child: SvgPicture.asset(
+                              'assets/images/arrow-right.svg',
+                              width: 10,
+                              height: 10,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/pages/temp.dart';
-import 'package:hello_world/pages/visa_reward.dart';
+import 'package:hello_world/pages/new_visa_reward.dart';
+import 'package:hello_world/pages/testing.dart';
+import 'package:hello_world/pages/layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           shadowColor: Colors.black,
         ),
         backgroundColor: Colors.black,
-        body: const VisaReward(),
+        body: const TestingPage(),
       ),
     );
   }
